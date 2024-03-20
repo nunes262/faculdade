@@ -13,7 +13,6 @@ public class exercicio10 {
         int menor = Math.min(numero1, numero2);
         int maior = Math.max(numero1, numero2);
 
-        // Imprime os números inteiros no intervalo [menor, maior]
         System.out.println("Números inteiros no intervalo [" + menor + ", " + maior + "]:");
         for (int i = menor; i <= maior; i++) {
             System.out.println(i);
