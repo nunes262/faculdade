@@ -1,7 +1,6 @@
 package classes;
 
 public class Resposta {
-
     private String texto;
 
     public Resposta(String texto) {
