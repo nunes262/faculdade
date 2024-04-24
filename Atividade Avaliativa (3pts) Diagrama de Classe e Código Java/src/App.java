@@ -1,5 +1,6 @@
 import classes.Atendente;
 import classes.Cliente;
+import classes.Pagamento;
 import classes.Resposta;
 import classes.Solicitação;
 import java.util.Scanner;
@@ -31,6 +32,11 @@ public class App {
 
         if (respostaAtendimento.equalsIgnoreCase("sim")) {
             System.out.println("Atendimento concluído com sucesso!");
+            System.out.println("Iniciando pagamento...");
+            System.out.println("Digite o valor total:");
+            double valorTotal = scanner.nextDouble();
+            Pagamento pagamento = new Pagamento(valorTotal);
+            pagamento.processarPagamento();
         } else {
             System.out.println("Por favor, entre em contato novamente se precisar de mais assistência.");
         }
