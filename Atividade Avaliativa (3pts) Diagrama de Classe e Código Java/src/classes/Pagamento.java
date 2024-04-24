@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Pagamento {
     private double valorTotal;
-    private double valorPago;
     private TipoPagamento tipoPagamento;
 
     public Pagamento(double valorTotal) {
@@ -25,7 +24,6 @@ public class Pagamento {
             calcularValorParcelas(numeroParcelas);
         } else {
             System.out.println("Pagamento à vista selecionado.");
-            valorPago = valorTotal;
         }
 
         // Informar o tipo de pagamento e passar o cartão
@@ -54,8 +52,6 @@ public class Pagamento {
         // Receber o pagamento
         System.out.println("Insira o valor pago:");
         double valorPago = new Scanner(System.in).nextDouble();
-
-        this.valorPago = valorPago;
 
         // Verificar se o valor pago é suficiente
         if (valorPago < valorTotal) {

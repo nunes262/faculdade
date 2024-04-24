@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class exercicio256 {
+public class exercicio25 {
     public static void main(String[] args) {
         String Stridade = JOptionPane.showInputDialog("Coloque sua idade: ");
         int intidade = Integer.parseInt(Stridade);

@@ -1,0 +1,59 @@
+@startuml Loja
+
+class Cliente {
+    -String nome
+    +Cliente(nome: String)
+    +getNome(): String
+}
+
+class Atendente {
+    -String nome
+    +Atendente(nome: String)
+    +atenderSolicitacao(solicitacao: Solicitacao): Resposta
+}
+
+class Solicitacao {
+    -Cliente cliente
+    -String descricao
+    +Solicitacao(cliente: Cliente, descricao: String)
+    +getCliente(): Cliente
+    +getDescricao(): String
+}
+
+class Resposta {
+    -String texto
+    +Resposta(texto: String)
+    +getTexto(): String
+}
+
+class Pagamento {
+    -double valorTotal
+    -double valorPago
+    -TipoPagamento tipoPagamento
+    +Pagamento(valorTotal: double)
+    +processarPagamento(): void
+    -calcularValorParcelas(numeroParcelas: int): void
+}
+
+class Finalizado {
+    -String status
+    +Finalizado()
+    +setStatus(status: String): void
+    +getStatus(): String
+}
+
+enum TipoPagamento {
+    CARTAO_CREDITO
+    CARTAO_DEBITO
+    DINHEIRO
+}
+
+Cliente --> Solicitacao
+Solicitacao --> Cliente
+Atendente --> Solicitacao
+Pagamento --> TipoPagamento
+Solicitacao --> Resposta
+Resposta --> Pagamento
+TipoPagamento --> Finalizado
+
+@enduml
