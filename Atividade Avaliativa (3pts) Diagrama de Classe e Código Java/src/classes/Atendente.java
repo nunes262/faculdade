@@ -8,7 +8,6 @@ public class Atendente {
     }
 
     public Resposta atenderSolicitação(Solicitação solicitacao) {
-        // Processar a solicitação e gerar uma resposta
-        return new Resposta("Seu problema foi resolvido.");
+        return new Resposta("Apos seu atendimento.");
     }
 }
