@@ -10,9 +10,6 @@ public class App {
         System.out.println("----------- INICIO ATIVIDADE ---------------\n");
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Digite seu CPF -> ");
-        String cpf = input.nextLine();
-
         System.out.print("Digite seu nome -> ");
         String name = input.nextLine();
 
@@ -22,6 +19,11 @@ public class App {
         System.out.print("Digite quantos dependentes tem -> ");
         int dependents = input.nextInt();
 
+        input.nextLine();
+
+        System.out.print("Digite seu CPF -> ");
+        String cpf = input.nextLine();
+
         System.out.print("Digite seu CEP -> ");
         String cep = input.nextLine();
 
@@ -30,9 +32,11 @@ public class App {
         CEPService cepService = new CEPService();
         CalculateTaxas taxCalculator = new CalculateTaxas();
 
-        System.out.println(cpfValidator.isValid(cpf));
+        System.out.println("\n----------- RESULTADO ---------------\n");
+
         System.out.println(worker.toString());
         taxCalculator.taxas(salary, dependents);
+        System.out.println(cpfValidator.isValid(cpf));
         System.out.println(cepService.getEnderecoFromCEP(cep));
 
         System.out.println("\n----------- FIM ATIVIDADE ---------------");
