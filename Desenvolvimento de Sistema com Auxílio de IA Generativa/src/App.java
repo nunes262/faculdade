@@ -8,7 +8,7 @@ import java.io.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("----------- INICIO ATIVIDADE ---------------\n");
+        System.out.println("----------- INICIO ATIVIDADE ---------------");
         Scanner input = new Scanner(System.in);
 
         System.out.print("Digite seu nome -> ");
@@ -47,9 +47,10 @@ public class App {
         br.newLine();
         br.write("----------- CEP ---------------");
         br.newLine();
+        br.newLine();
         br.write(cepService.getEnderecoFromCEP(cep));
         br.close();
-
+        System.out.println("\nProcure pelo arquivo file1.txt na arvore do projeto");
         System.out.println("----------- FIM ATIVIDADE ---------------");
 
         input.close();
