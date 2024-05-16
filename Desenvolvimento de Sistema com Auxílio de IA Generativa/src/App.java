@@ -4,6 +4,7 @@ import model.Worker;
 import strategy.CalculateTaxas;
 import utils.CEPService;
 import utils.CPFValidator;
+import java.io.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -32,14 +33,21 @@ public class App {
         CEPService cepService = new CEPService();
         CalculateTaxas taxCalculator = new CalculateTaxas();
 
-        System.out.println("\n----------- RESULTADO ---------------\n");
+        OutputStream os = new FileOutputStream("file1.txt");
+        Writer writer = new OutputStreamWriter(os);
+        BufferedWriter br = new BufferedWriter(writer);
 
-        System.out.println(worker.toString());
-        taxCalculator.taxas(salary, dependents);
-        System.out.println(cpfValidator.isValid(cpf));
-        System.out.println(cepService.getEnderecoFromCEP(cep));
+        br.write("----------- RESULTADO ---------------");
+        br.newLine();
+        br.write(worker.toString());
+        br.write(taxCalculator.taxas(salary, dependents));
+        br.newLine();
+        br.write(cpfValidator.isValid(cpf));
+        br.newLine();
+        br.write(cepService.getEnderecoFromCEP(cep));
+        br.close();
 
-        System.out.println("\n----------- FIM ATIVIDADE ---------------");
+        System.out.println("----------- FIM ATIVIDADE ---------------");
 
         input.close();
     }

@@ -42,7 +42,7 @@ public class CalculateTaxas {
         }
     }
 
-    public void taxas(double salary, int dependents) {
+    public String taxas(double salary, int dependents) {
         TaxStrategy inssStrategy = new INSSTaxStrategy();
         TaxStrategy irrfStrategy = new IRRFtaxStrategy();
 
@@ -52,8 +52,7 @@ public class CalculateTaxas {
 
         double result = salary - descontoINSS - descontoIRRF;
 
-        System.out.printf("Desconto INSS: R$ %.2f\n", descontoINSS);
-        System.out.printf("Desconto IRRF: R$ %.2f\n", descontoIRRF);
-        System.out.println("Salário líquido: R$" + result);
+        return ("\nDesconto INSS: R$" + descontoINSS + "\nDesconto IRRF: R$" + descontoIRRF
+                + "\nSalario liquido: R$" + result);
     }
 }
