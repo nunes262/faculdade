@@ -1,9 +1,20 @@
 ----------- RESULTADO ---------------
-Nome: PEDRO
-Salario: 1350.0
+
+Nome: Pedro
+Salario: 5000.0
 Dependentes: 0
-Desconto INSS: R$108.0
-Desconto IRRF: R$0.0
-Salario liquido: R$1242.0
+Desconto INSS: R$502.7698
+Desconto IRRF: R$1499.16906
+Salario liquido: R$2998.06114
 CPF: 137.516.876-29
-{  "cep": "30620-110",  "logradouro": "Rua Maurílio Gomes da Silveira",  "complemento": "",  "bairro": "Milionários (Barreiro)",  "localidade": "Belo Horizonte",  "uf": "MG",  "ibge": "3106200",  "gia": "",  "ddd": "31",  "siafi": "4123"}
+----------- CEP ---------------
+  "cep": "30620-110"
+  "logradouro": "Rua Maurílio Gomes da Silveira"
+  "complemento": ""
+  "bairro": "Milionários (Barreiro)"
+  "localidade": "Belo Horizonte"
+  "uf": "MG"
+  "ibge": "3106200"
+  "gia": ""
+  "ddd": "31"
+  "siafi": "4123"

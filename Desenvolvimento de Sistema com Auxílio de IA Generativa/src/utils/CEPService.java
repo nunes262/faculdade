@@ -31,7 +31,7 @@ public class CEPService {
 
             }
             reader.close();
-            String result = response.toString();
+            String result = response.toString().replace(",", "\n").replace("{", "").replace("}", "");
             return result;
 
         } catch (IOException e) {

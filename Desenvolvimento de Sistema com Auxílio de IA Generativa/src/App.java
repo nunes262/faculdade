@@ -39,10 +39,13 @@ public class App {
 
         br.write("----------- RESULTADO ---------------");
         br.newLine();
+        br.newLine();
         br.write(worker.toString());
         br.write(taxCalculator.taxas(salary, dependents));
         br.newLine();
         br.write(cpfValidator.isValid(cpf));
+        br.newLine();
+        br.write("----------- CEP ---------------");
         br.newLine();
         br.write(cepService.getEnderecoFromCEP(cep));
         br.close();
