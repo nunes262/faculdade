@@ -1,10 +1,11 @@
 import java.util.Scanner;
+import java.nio.file.*;
+import java.io.*;
 
 import model.Worker;
 import strategy.CalculateTaxas;
 import utils.CEPService;
 import utils.CPFValidator;
-import java.io.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -33,7 +34,26 @@ public class App {
         CEPService cepService = new CEPService();
         CalculateTaxas taxCalculator = new CalculateTaxas();
 
-        OutputStream os = new FileOutputStream("file1.txt");
+        String fileName = "file1.txt";
+        boolean sameCpf = false;
+
+        if (Files.exists(Paths.get(fileName))) {
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains("CPF: " + cpf)) {
+                    sameCpf = true;
+                    break;
+                }
+            }
+            reader.close();
+        }
+
+        if (!sameCpf) {
+            fileName = "file_" + name + ".txt";
+        }
+
+        OutputStream os = new FileOutputStream(fileName);
         Writer writer = new OutputStreamWriter(os);
         BufferedWriter br = new BufferedWriter(writer);
 
@@ -43,14 +63,15 @@ public class App {
         br.write(worker.toString());
         br.write(taxCalculator.taxas(salary, dependents));
         br.newLine();
-        br.write(cpfValidator.isValid(cpf));
+        br.write("CPF: " + cpfValidator.isValid(cpf));
         br.newLine();
         br.write("----------- CEP ---------------");
         br.newLine();
         br.newLine();
         br.write(cepService.getEnderecoFromCEP(cep));
         br.close();
-        System.out.println("\nProcure pelo arquivo file1.txt na arvore do projeto");
+
+        System.out.println("\nProcure pelo arquivo " + fileName + " na arvore do projeto");
         System.out.println("----------- FIM ATIVIDADE ---------------");
 
         input.close();

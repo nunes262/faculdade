@@ -1,12 +1,12 @@
 ----------- RESULTADO ---------------
 
-Nome: pedro
-Salario: 1.0
-Dependentes: 1
-Desconto INSS: R$0.08
-Desconto IRRF: R$0.0
-Salario liquido: R$0.92
-CPF Invalido, tente novamente
+Nome: Pedro
+Salario: 4562.0
+Dependentes: 0
+Desconto INSS: R$454,59
+Desconto IRRF: R$1382,22
+Salario liquido: R$2725,19
+CPF: CPF: 137.516.876-29
 ----------- CEP ---------------
 
   "cep": "30620-110"

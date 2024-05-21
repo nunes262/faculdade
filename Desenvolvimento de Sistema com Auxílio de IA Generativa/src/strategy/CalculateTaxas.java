@@ -1,5 +1,7 @@
 package strategy;
 
+import java.text.DecimalFormat;
+
 public class CalculateTaxas {
 
     public interface TaxStrategy {
@@ -50,9 +52,11 @@ public class CalculateTaxas {
         double baseIRRF = salary - descontoINSS;
         double descontoIRRF = irrfStrategy.calculateTax(baseIRRF);
 
-        double result = salary - descontoINSS - descontoIRRF;
+        double result = (salary - descontoINSS - descontoIRRF);
 
-        return ("\nDesconto INSS: R$" + descontoINSS + "\nDesconto IRRF: R$" + descontoIRRF
-                + "\nSalario liquido: R$" + result);
+        DecimalFormat df = new DecimalFormat("#.00");
+
+        return ("\nDesconto INSS: R$" + df.format(descontoINSS) + "\nDesconto IRRF: R$" + df.format(descontoIRRF)
+                + "\nSalario liquido: R$" + df.format(result));
     }
 }
