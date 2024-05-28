@@ -7,6 +7,7 @@ import classes.ProdutoDAO;
 public class App {
     private static ProdutoDAO produtoDAO = new ProdutoDAO();
     private static Scanner scanner = new Scanner(System.in);
+    public static int CurrentId = 1;
 
     public static void main(String[] args) {
         int opcao = 0;
@@ -44,12 +45,6 @@ public class App {
     }
 
     private static void addProduct() {
-        System.out.print("\nID: ");
-        int id = scanner.nextInt();
-
-        System.out.print("Quantidade: ");
-        int quantity = scanner.nextInt();
-        scanner.nextLine();
 
         System.out.print("Nome: ");
         String name = scanner.nextLine();
@@ -60,8 +55,12 @@ public class App {
         System.out.print("Preço: ");
         double price = scanner.nextDouble();
 
-        Produto produto = new Produto(id, name, description, price, quantity);
-        produtoDAO.AddProduct(produto);
+        System.out.print("Quantidade: ");
+        int quantity = scanner.nextInt();
+        scanner.nextLine();
+
+        Produto produto = new Produto(CurrentId++, name, description, price, quantity);
+        produtoDAO.addProduct(produto);
         System.out.println("\nProduto adicionado com sucesso!");
     }
 
@@ -75,14 +74,14 @@ public class App {
     }
 
     private static void updateProduct() {
-        System.out.print("\nID do produto a ser atualizado: ");
-        int id = scanner.nextInt();
+        System.out.print("\nNome do produto a ser atualizado: ");
+        String name = scanner.nextLine();
         scanner.nextLine();
-        Produto produto = produtoDAO.searchProductById(id);
+        Produto produto = produtoDAO.searchProductByName(name);
 
         if (produto != null) {
             System.out.print("Novo nome: ");
-            String name = scanner.nextLine();
+            String nome = scanner.nextLine();
 
             System.out.print("Nova descrição: ");
             String description = scanner.nextLine();
@@ -94,7 +93,7 @@ public class App {
             System.out.print("Novo preço: ");
             double price = scanner.nextDouble();
 
-            produto.setName(name);
+            produto.setName(nome);
             produto.setPrice(price);
             produto.setQuantity(quantity);
             produto.setDescription(description);
@@ -108,12 +107,12 @@ public class App {
     }
 
     private static void deleteProduct() {
-        System.out.print("\nID do produto a ser deletado: ");
-        int id = scanner.nextInt();
-        Produto produto = produtoDAO.searchProductById(id);
+        System.out.print("\nNome do produto a ser deletado: ");
+        String name = scanner.nextLine();
+        Produto produto = produtoDAO.searchProductByName(name);
 
         if (produto != null) {
-            produtoDAO.deleteProduct(id);
+            produtoDAO.deleteProduct(name);
             System.out.println("\nProduto deletado com sucesso!");
         } else {
             System.out.println("\nProduto não encontrado.");
