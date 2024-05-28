@@ -5,44 +5,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutoDAO {
-    final String FILE_NAME = "produtos.txt";
-    List<Produto> produtos;
+    private final String FILE_NAME = "produtos.txt";
+    private List<Produto> produtos;
 
     public ProdutoDAO() {
         produtos = new ArrayList<>();
-        LoadData();
+        loadData();
     }
 
-    public void AddProduct(Produto produto) {
+    public void addProduct(Produto produto) {
         produtos.add(produto);
-        SaveData();
+        saveData();
     }
 
     public List<Produto> listProducts() {
         return produtos;
     }
 
-    public Produto searchProductById(int id) {
-        return produtos.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
+    public Produto searchProductByName(String name) {
+        return produtos.stream().filter(p -> p.getName().equals(name)).findFirst().orElse(null);
     }
 
     public void updateProduct(Produto produto) {
-        Produto p = searchProductById(produto.getId());
+        Produto p = searchProductByName(produto.getName());
         if (p != null) {
             p.setName(produto.getName());
             p.setPrice(produto.getPrice());
             p.setDescription(produto.getDescription());
             p.setQuantity(produto.getQuantity());
-            SaveData();
+            saveData();
         }
     }
 
-    public void deleteProduct(int id) {
-        produtos.removeIf(p -> p.getId() == id);
-        SaveData();
+    public void deleteProduct(String name) {
+        produtos.removeIf(p -> p.getName().equals(name));
+        saveData();
     }
 
-    private void SaveData() {
+    private void saveData() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(produtos);
         } catch (IOException e) {
@@ -50,11 +50,11 @@ public class ProdutoDAO {
         }
     }
 
-    private void LoadData() {
+    private void loadData() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             produtos = (List<Produto>) ois.readObject();
         } catch (FileNotFoundException e) {
-            System.out.println("Produtos.txt not found. Assuming no existing data.");
+            System.out.println("produtos.txt not found. Assuming no existing data.");
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
