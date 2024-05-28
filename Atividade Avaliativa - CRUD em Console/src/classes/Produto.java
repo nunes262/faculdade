@@ -53,9 +53,8 @@ public class Produto implements Serializable {
 
     @Override
     public String toString() {
-        return "\nProduto - ( \nID: " + id + "\nName: " + name + "\nDescription: " + description + "\nPrice: " + price
-                + "\nQuantity: "
-                + quantity + "\n)";
+        return "\nProduto - ( ID: " + id + ", Nome: " + name + ", descrição: " + description + ", preço: " + price
+                + ", quantidade: " + quantity + " )";
     }
 
 }
