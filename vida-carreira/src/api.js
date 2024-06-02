@@ -153,114 +153,66 @@ export const databaseCourseData = [
 
 export const resumeCourseData = [
     {
-        nome: "Crie um Currículo Matador em 5 Minutos! | 10 Dicas Infalíveis",
-        url: "https://www.youtube.com/watch?v=2hB09-y5q-Y",
-        descricao:
-            "Aprenda a criar um currículo irresistível em apenas 5 minutos com essas 10 dicas infalíveis! Prepare-se para conquistar a vaga dos seus sonhos.",
+        nome: "Crie um Currículo Matador em 5 Minutos!",
+        url: "https://youtu.be/FW0upUOjnTg?si=5N-tc1IWLjYSRJJ0",
     },
     {
         nome: "Currículo Perfeito para Vagas de Emprego | 5 Dicas infalíveis",
-        url: "https://www.youtube.com/watch?v=074204100z",
-        descricao:
-            "Domine a arte de criar um currículo perfeito para qualquer vaga de emprego com essas 5 dicas infalíveis! Destaque-se da concorrência e garanta a sua entrevista.",
-    },
-    {
-        nome: "Como Escrever um Currículo para INICIANTES | Dicas Completas",
-        url: "https://www.youtube.com/watch?v=b_z_n4784_k",
-        descricao:
-            "Um guia completo para iniciantes que desejam criar um currículo profissional e atraente. Aprenda tudo desde a estrutura básica até as melhores práticas para se destacar.",
+        url: "https://youtu.be/HensKLtZW-w?si=DnpZ4Bh8_5TduLvE",
     },
     {
         nome: "Currículo para Desenvolvedor: Tudo o que você precisa saber!",
-        url: "https://www.youtube.com/watch?v=8_g5t-s-s2U",
-        descricao:
-            "Um guia especializado para desenvolvedores que desejam criar um currículo irresistível e conquistar as melhores oportunidades. Descubra as habilidades e experiências que mais se destacam na área.",
+        url: "https://youtu.be/OXZYB3kVH9w?si=6XFl_2Bix7_BNcrS",
     },
     {
         nome: "Currículo para Vagas de Front-End: Dicas para se destacar!",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Um guia estratégico para profissionais de Front-End que desejam criar um currículo que demonstre suas habilidades e conquiste as melhores vagas. Descubra as melhores práticas para se destacar na área.",
+        url: "https://youtu.be/DFT3UCmJIC4?si=AMeOstOs9IuldUGD",
     },
     {
         nome: "Currículo para Vagas de Back-End: Dicas para se destacar!",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Um guia estratégico para profissionais de Back-End que desejam criar um currículo que demonstre suas habilidades e conquiste as melhores vagas. Descubra as melhores práticas para se destacar na área.",
+        url: "https://youtu.be/SqUbztjMmp4?si=RjLe5Uv9sRKjCVKg",
     },
     {
         nome: "Currículo para Vagas de Marketing Digital: Dicas para se destacar!",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Um guia estratégico para profissionais de Marketing Digital que desejam criar um currículo que demonstre suas habilidades e conquiste as melhores vagas. Descubra as melhores práticas para se destacar na área.",
+        url: "https://youtu.be/39_IOtMv70c?si=pWZ310I4-lswkBlC",
     },
     {
         nome: "Currículo para Vagas de Design: Dicas para se destacar!",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Um guia estratégico para profissionais de Design que desejam criar um currículo que demonstre suas habilidades e conquiste as melhores vagas. Descubra as melhores práticas para se destacar na área.",
+        url: "https://youtu.be/oGe5F8FQ-GQ?si=aqtXUnzea_VnStDb",
     },
 ];
 
 export const backendJson = [
     {
-        nome: "Aprenda Desenvolvimento Web Back-End do Zero à Maestria em 2023",
-        url: "https://www.youtube.com/watch?v=82x_984t_2A",
-        descricao:
-            "Domine a arte do desenvolvimento web back-end em 2023 com esta jornada completa do zero à maestria! Aprenda desde os conceitos básicos até as tecnologias mais avançadas.",
+        nome: "Back-End para Iniciantes em Programação (Parte 1) | Série (Começando aos 40)",
+        url: "https://youtu.be/Qjk-cSW-jk4?si=ZatVtLtze7-FhhW_",
     },
     {
-        nome: "O que é Back-End? | Tudo o que você precisa saber!",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Desvende os mistérios do desenvolvimento back-end e compreenda sua importância na criação de sites e aplicativos robustos e escaláveis. Descubra as principais linguagens, frameworks e ferramentas utilizadas na área.",
+        nome: "O que eu preciso saber para ser um desenvolvedor Back-end",
+        url: "https://youtu.be/f4vdXBJtwjA?si=EFXP4MKb22E6WLRl",
     },
     {
-        nome: "Back-End para Iniciantes - O que é e como começar?",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Um guia introdutório para iniciantes que desejam ingressar no mundo do desenvolvimento back-end. Aprenda os conceitos básicos, as habilidades essenciais e os primeiros passos para dar início à sua jornada.",
+        nome: "Guia de Estudos para desenvolvedor Back-end",
+        url: "https://youtu.be/3Wo4L2dPS58?si=6LgJxShjv4F3Vyji",
     },
     {
         nome: "Rotina de um Desenvolvedor Back-End: O que faz um dev back-end?",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Descubra como é a rotina de um desenvolvedor back-end e as principais responsabilidades do dia a dia na área. Explore as diferentes áreas de atuação e as habilidades necessárias para se destacar.",
+        url: "https://youtu.be/xiPM_2aWtUc?si=pKl9ZsK8OSdHa772",
     },
     {
         nome: "Carreira em Back-End: Salário, Mercado e Oportunidades",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Analise as perspectivas de carreira em back-end, incluindo salários, mercado de trabalho e as principais oportunidades disponíveis para profissionais da área. Descubra como se preparar para conquistar uma carreira de sucesso.",
+        url: "https://youtu.be/TeY7jRDlrgQ?si=LF8hIcNaK0UWgIMs",
     },
     {
-        nome: "As Melhores Linguagens de Programação para Back-End em 2023",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Conheça as principais linguagens de programação para desenvolvimento back-end em 2023. Compare seus recursos, vantagens e desvantagens para escolher a linguagem ideal para seus projetos.",
+        nome: "As Melhores Linguagens de Programação para Back-End em 2024",
+        url: "https://youtu.be/sgqvzzWTInI?si=qwjzcVDNPWcYLPix",
     },
     {
-        nome: "Frameworks Back-End Mais Populares em 2023",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Descubra os frameworks back-end mais populares em 2023 e suas aplicações práticas. Aprenda sobre seus benefícios, características e como escolher o framework ideal para suas necessidades.",
-    },
-    {
-        nome: "Banco de Dados para Desenvolvedores Back-End",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Compreenda a importância dos bancos de dados no desenvolvimento back-end e aprenda sobre os principais tipos, modelos e ferramentas de gerenciamento de dados.",
-    },
-    {
-        nome: "Segurança em Aplicações Web Back-End",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Aprenda sobre as principais ameaças à segurança em aplicações web back-end e as melhores práticas para proteger seus sistemas contra ataques cibernéticos. Garanta a confiabilidade e a proteção de dados dos seus projetos.",
+        nome: "Frameworks Back-End Mais Populares em 2024",
+        url: "https://youtu.be/vO0iLLdpvb0?si=NEiB7E78kEd0955b",
     },
     {
         nome: "API REST: O que é e como funciona?",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Domine o conceito de APIs REST e aprenda a criar e consumir APIs RESTful para integrar diferentes sistemas e serviços. Explore as principais funcionalidades e recursos da API REST.",
+        url: "https://youtu.be/ghTrp1x_1As?si=fEj313Jdy6qj7HTX",
     },
 ];

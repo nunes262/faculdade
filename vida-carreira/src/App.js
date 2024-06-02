@@ -29,7 +29,10 @@ function App() {
                 <hr className="seperator" />
                 <div className="carousel-wrapper">
                     {/*  */}
-                    <div id="front" style={{ height: "80vh" }}>
+                    <div
+                        id="front"
+                        style={{ height: "80vh", padding: "0 30px" }}
+                    >
                         <Title>Aulas Front-End</Title>
                         <Carousel breakPoints={breakPoints}>
                             {serviceData.map((item) => (
@@ -47,7 +50,10 @@ function App() {
                     </div>
 
                     {/*  */}
-                    <div id="back" style={{ height: "80vh" }}>
+                    <div
+                        id="back"
+                        style={{ height: "80vh", padding: "0 30px" }}
+                    >
                         <Title>Aulas Back-end</Title>
                         <Carousel breakPoints={breakPoints}>
                             {backendJson.map((item) => (
@@ -65,7 +71,7 @@ function App() {
                     </div>
 
                     {/*  */}
-                    <div id="bd" style={{ height: "80vh" }}>
+                    <div id="bd" style={{ height: "80vh", padding: "0 30px" }}>
                         <Title>Aulas Banco de Dados</Title>
                         <Carousel breakPoints={breakPoints}>
                             {databaseCourseData.map((item) => (
@@ -83,7 +89,7 @@ function App() {
                     </div>
 
                     {/*  */}
-                    <div id="ia" style={{ height: "80vh" }}>
+                    <div id="ia" style={{ height: "80vh", padding: "0 30px" }}>
                         <Title>Aulas Inteligência Artificial</Title>
                         <Carousel breakPoints={breakPoints}>
                             {aiCourseData.map((item) => (
@@ -101,7 +107,10 @@ function App() {
                     </div>
 
                     {/*  */}
-                    <div id="resume" style={{ height: "80vh" }}>
+                    <div
+                        id="resume"
+                        style={{ height: "80vh", padding: "0 30px" }}
+                    >
                         <Title>Aulas criação de curriculos</Title>
                         <div style={{ paddingBottom: "2rem" }}>
                             <Carousel breakPoints={breakPoints}>
