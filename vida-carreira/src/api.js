@@ -2,101 +2,69 @@ export const serviceData = [
     {
         nome: "Web Developer Portfolio - 9.5/10 (Front End, React)",
         url: "https://youtu.be/VjiWpGR82t0?si=ct_UwsbNzObx8uF5",
-        description:
-            "In this video, we'll explore the essential components that make up a top-tier web developer portfolio, including design, usability, functionality, and code quality. We will also provide you with valuable tips and tricks on how to create an outstanding portfolio that can attract potential clients or employers.",
     },
     {
         nome: "Build ChatGPT AI Tool in React JS | React JS Project with Working Example using OpenAI API",
         url: "https://youtu.be/vAO1fxifJIs?si=H-s6opmAtYQHV04g",
-        description:
-            "In this Reactjs project, we will make an awesome responsive Chat GPT 2.0 website clone step-by-step by using Open AI API. We learn React hooks, tailwind css, open AI integration, and many more. We will also build a backend using Open AI's latest package! You can build your own chatbot interface and then can integrate it into any web service. At the end, we are going to deploy this app on vercel as a full-stack application so you can share your skills with others.",
     },
     {
         nome: "Guia Frontend para iniciantes",
         url: "https://www.youtube.com/watch?v=BRuTnxjf2k8",
-        description:
-            "Um guia completo para quem está começando no mundo do front-end, com tudo o que você precisa saber para dar os primeiros passos.",
     },
     {
         url: "https://www.youtube.com/watch?v=8xo1FID4TqU",
         nome: "Tudo sobre Front-End: 💰 salários, o que estudar e dicas para carreira.",
-        description:
-            "Saiba tudo sobre o mercado de front-end, incluindo salários, as principais tecnologias e dicas para construir uma carreira de sucesso.",
     },
     {
         nome: "CAMINHOS PARA SER UM DEV FRONT-END EM 2023 (GUIA COMPLETO E ATUALIZADO)",
         url: "https://www.youtube.com/watch?v=30nlBGjPRYM",
-        description:
-            " Um guia completo e atualizado para se tornar um desenvolvedor front-end em 2023, com tudo o que você precisa saber para começar.",
     },
     {
         nome: "O QUE É FRONT-END E BACK-END???",
         url: "https://www.youtube.com/watch?v=Em0R3csNMVE",
-        description:
-            "Uma explicação clara e concisa sobre a diferença entre front-end e back-end, para que você possa entender melhor o que cada um faz.",
     },
     {
         nome: "Não sabe escolher entre FRONT-END vs BACK-END? Veja este video",
         url: "https://www.youtube.com/watch?v=vFSNUmw32t0",
-        description:
-            "Se você está em dúvida sobre qual área seguir, front-end ou back-end, este vídeo te ajudará a tomar a melhor decisão.",
     },
 ];
 
 export const aiCourseData = [
     {
         nome: "Inteligência Artificial: O que é e como funciona?",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Desvende os mistérios da inteligência artificial e compreenda como essa tecnologia revolucionária está transformando o mundo. Descubra as diferentes áreas de aplicação e os principais desafios da IA.",
+        url: "https://youtu.be/b9HzilHAIbs?si=9EPEbmwNWMfVf3Qh",
     },
     {
-        nome: "Aprenda Inteligência Artificial do Zero à Maestria em 2023",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Domine a arte da inteligência artificial com esta jornada completa do zero à maestria em 2023! Aprenda desde os conceitos básicos até as técnicas mais avançadas de machine learning e deep learning.",
+        nome: "Aprenda Inteligência Artificial do Zero à Maestria",
+        url: "https://youtu.be/qBA_6gf5Dkg?si=RlW79yMTZGclVCXn",
     },
     {
         nome: "Machine Learning para Iniciantes: O que é e como começar?",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Um guia introdutório para iniciantes que desejam ingressar no mundo do machine learning. Aprenda os conceitos básicos, as habilidades essenciais e os primeiros passos para dar início à sua jornada.",
+        url: "https://youtu.be/0PrOA2JK6GQ?si=z3Wg8xlBg-W9ld3K",
     },
     {
         nome: "Deep Learning: O que é e como funciona?",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Mergulhe no universo do deep learning e compreenda como essa tecnologia revolucionária está possibilitando avanços incríveis em áreas como reconhecimento de imagem, processamento de linguagem natural e muito mais.",
+        url: "https://youtu.be/kryIBKPVZ7A?si=531fDNlLDDd_KuMz",
     },
     {
         nome: "Aplicações da Inteligência Artificial: Casos de Sucesso",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Explore diversos casos de sucesso da inteligência artificial em diferentes áreas, como saúde, finanças, indústria e marketing. Descubra como a IA está impactando o mundo e abrindo novas possibilidades.",
+        url: "https://youtu.be/rLY5wdxPUvU?si=u6fBxQZm68iEm9tH",
     },
     {
         nome: "Ferramentas de Inteligência Artificial para Desenvolvedores",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Conheça as principais ferramentas de inteligência artificial disponíveis para desenvolvedores, incluindo bibliotecas, frameworks e plataformas de desenvolvimento. Aprenda como utilizar essas ferramentas para criar seus próprios projetos de IA.",
+        url: "https://youtu.be/TZSI_gR5ego?si=gPb0GBLi3RjrG-9K",
     },
     {
         nome: "Ética da Inteligência Artificial: Desafios e Reflexões",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Reflita sobre os desafios éticos da inteligência artificial e as implicações sociais dessa tecnologia. Explore temas como vieses algorítmicos, privacidade de dados e o futuro do trabalho na era da IA.",
+        url: "https://youtu.be/RAR1b8XsK-4?si=-kyIBBW8TYHigdMX",
     },
     {
         nome: "O Futuro da Inteligência Artificial: Tendências e Projeções",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Descubra as tendências mais recentes da inteligência artificial e as projeções para o futuro dessa tecnologia. Explore como a IA irá impactar ainda mais nossas vidas nos próximos anos.",
+        url: "https://youtu.be/2p8Hr4KIvfI?si=tf9yDnuIGUVoXBFz",
     },
     {
         nome: "Inteligência Artificial e o Mercado de Trabalho: Oportunidades e Desafios",
-        url: "https://www.youtube.com/watch?v=75z_z49_23E",
-        descricao:
-            "Analise as oportunidades e os desafios do mercado de trabalho em relação à inteligência artificial. Descubra as habilidades e conhecimentos necessários para se destacar nessa área e construir uma carreira de sucesso.",
+        url: "https://youtu.be/9kqzszLqZoU?si=bJFbBOQr2gYvSiCP",
     },
 ];
 
