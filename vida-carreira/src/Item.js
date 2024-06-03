@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export default styled.div`
-    border: 1px solid gray;
     padding: 6px;
     display: flex;
     flex-direction: column;
@@ -15,19 +14,17 @@ export default styled.div`
     p {
         margin: 0;
         padding: 0;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
+        align-self: center;
         color: black;
-
         text-align: center;
     }
 `;
 
 export const Title = styled.h1`
     padding-left: 6rem;
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 40px;
-    color: #080808;
     color: darkblue;
 `;
