@@ -1,0 +1,2 @@
+dinheiro,12.0,12/01/2026
+roupas,2 pecas,12/05/2023
