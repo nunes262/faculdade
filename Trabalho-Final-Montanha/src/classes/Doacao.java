@@ -25,15 +25,6 @@ public class Doacao {
         return data;
     }
 
-    @Override
-    public String toString() {
-        return "Doacao{" +
-                "tipo='" + tipo + '\'' +
-                ", quantidade=" + quantidade +
-                ", data=" + data +
-                '}';
-    }
-
     public boolean isDinheiro() {
         return quantidade instanceof Double;
     }

@@ -1,0 +1,33 @@
+@startuml
+package classes {
+    class ArquivoTexto {
+        - static final String FILE_PATH
+        - static final SimpleDateFormat DATE_FORMAT
+        + static void salvarDoacoes(List<Doacao>)
+        + static List<Doacao> carregarDoacoes()
+    }
+
+    class Doacao {
+        - String tipo
+        - Object quantidade
+        - Date data
+        + Doacao(String, Object, Date)
+        + String getTipo()
+        + Object getQuantidade()
+        + Date getData()
+        + String toString()
+        + boolean isDinheiro()
+    }
+
+    class GerenciamentoDoacoes {
+        - List<Doacao> doacoes
+        + GerenciamentoDoacoes()
+        + void adicionarDoacao(Doacao)
+        + double calcularTotalDeDoacoes()
+        + List<Doacao> getDoacoes()
+    }
+}
+
+ArquivoTexto ..> Doacao
+GerenciamentoDoacoes ..> Doacao
+@enduml

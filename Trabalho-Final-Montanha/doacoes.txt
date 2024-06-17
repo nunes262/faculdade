@@ -1,2 +1,21 @@
-dinheiro,12.0,12/01/2026
-roupas,2 pecas,12/05/2023
+DOACOES
+
+Tipo da doacao: dinheiro
+Quantidade da doacao: 34.0
+Data da doacao: 12/05/2024
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Tipo da doacao: roupas
+Quantidade da doacao: 3 shorts, 2 blusas e 1 par de t�nis
+Data da doacao: 23/04/2023
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Tipo da doacao: agua
+Quantidade da doacao: 25 litros
+Data da doacao: 30/05/2024
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+OBRIGADO PELA DOACAO!

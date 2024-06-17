@@ -3,10 +3,10 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SistemaDeGerenciamentoDeDoacoes {
+public class GerenciamentoDoacoes {
     private List<Doacao> doacoes;
 
-    public SistemaDeGerenciamentoDeDoacoes() {
+    public GerenciamentoDoacoes() {
         this.doacoes = new ArrayList<>();
     }
 
@@ -14,12 +14,10 @@ public class SistemaDeGerenciamentoDeDoacoes {
         doacoes.add(doacao);
     }
 
-    public double calcularTotalDeDoacoes() {
-        double total = 0;
+    public int calcularTotalDeDoacoes() {
+        int total = 0;
         for (Doacao doacao : doacoes) {
-            if (doacao.isDinheiro()) {
-                total += (Double) doacao.getQuantidade();
-            }
+            total += 1;
         }
         return total;
     }

@@ -2,34 +2,34 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import classes.ArquivoHelper;
+import classes.ArquivoTexto;
 import classes.Doacao;
-import classes.SistemaDeGerenciamentoDeDoacoes;
+import classes.GerenciamentoDoacoes;
 
 public class Main {
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
 
     public static void main(String[] args) {
-        SistemaDeGerenciamentoDeDoacoes sistema = new SistemaDeGerenciamentoDeDoacoes();
-        sistema.getDoacoes().addAll(ArquivoHelper.carregarDoacoes());
+        GerenciamentoDoacoes sistema = new GerenciamentoDoacoes();
+        sistema.getDoacoes().addAll(ArquivoTexto.carregarDoacoes());
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("1. Adicionar doação");
-            System.out.println("2. Ver total de doações em dinheiro");
+            System.out.println("\n1. Adicionar doação");
+            System.out.println("2. Ver total de doações");
             System.out.println("3. Sair");
             int escolha = scanner.nextInt();
             scanner.nextLine();
 
             switch (escolha) {
                 case 1:
-                    System.out.print("Tipo de doação (dinheiro, alimentos, roupas, etc.): ");
+                    System.out.print("\nTipo de doação (dinheiro, alimentos, roupas, etc.): ");
                     String tipo = scanner.nextLine();
                     Object quantidade;
                     if (tipo.equalsIgnoreCase("dinheiro")) {
                         System.out.print("Quantidade: ");
                         quantidade = scanner.nextDouble();
-                        scanner.nextLine(); // Consume newline
+                        scanner.nextLine();
                     } else {
                         System.out.print("Quantidade (descrição): ");
                         quantidade = scanner.nextLine();
@@ -41,23 +41,22 @@ public class Main {
                         Date data = DATE_FORMAT.parse(dataStr);
                         Doacao doacao = new Doacao(tipo, quantidade, data);
                         sistema.adicionarDoacao(doacao);
-                        ArquivoHelper.salvarDoacoes(sistema.getDoacoes());
-                        System.out.println("Doação adicionada com sucesso!");
+                        ArquivoTexto.salvarDoacoes(sistema.getDoacoes());
+                        System.out.println("\nDoação adicionada com sucesso!");
                     } catch (Exception e) {
-                        System.out.println("Erro ao adicionar doação. Verifique os dados e tente novamente.");
+                        System.out.println("\nErro ao adicionar doação. Verifique os dados e tente novamente.");
                     }
                     break;
                 case 2:
-                    double total = sistema.calcularTotalDeDoacoes();
-                    System.out.println("Total de doações em dinheiro: " + total);
+                    int total = sistema.calcularTotalDeDoacoes();
+                    System.out.println("\nTotal de doações realizadas: " + total);
                     break;
                 case 3:
-                    System.out.println("Saindo...");
+                    System.out.println("\nObrigado pela doação!");
                     return;
                 default:
-                    System.out.println("Opção inválida. Tente novamente.");
+                    System.out.println("\nOpção inválida. Tente novamente.");
             }
-            scanner.close();
         }
     }
 }

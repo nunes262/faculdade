@@ -6,17 +6,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ArquivoHelper {
+public class ArquivoTexto {
     private static final String FILE_PATH = "doacoes.txt";
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
 
     public static void salvarDoacoes(List<Doacao> doacoes) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH))) {
+            writer.write("DOACOES\n\n");
             for (Doacao doacao : doacoes) {
-                writer.write(doacao.getTipo() + "," + doacao.getQuantidade().toString() + ","
-                        + DATE_FORMAT.format(doacao.getData()));
+                writer.write("Tipo da doacao: " + doacao.getTipo() + "\n"
+                        + "Quantidade da doacao: "
+                        + doacao.getQuantidade().toString() + "\n"
+                        + "Data da doacao: " + DATE_FORMAT.format(doacao.getData()) + "\n\n"
+                        + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=" + "\n");
                 writer.newLine();
             }
+            writer.write("OBRIGADO PELA DOACAO!");
         } catch (IOException e) {
             e.printStackTrace();
         }
