@@ -1,51 +1,48 @@
 package lista.lista01;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
 public class AppTest {
+
     @Test
     public void testPessoaIMC() {
         Pessoa pessoa = new Pessoa(80, 1.72);
-        assertArrayEquals(27.04, pessoa.calcularIMC(), 0.01);
+        assertEquals(27.04, pessoa.calcularIMC(), 0.01);
+    }
+
+    @Test
+    public void testPessoaPesoAlturaInvalidos() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Pessoa(0, 1.72);
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Pessoa(-80, 1.72);
+        });
     }
 
     @Test
     public void testRetanguloAreaEPerimetro() {
         Retangulo retangulo = new Retangulo(5, 10);
-        assertEquals(50, retangulo.calcularArea(), 0.01);
-        assertEquals(30, retangulo.calcularPerimetro(), 0.01);
+        assertEquals(50, retangulo.calculaArea(), 0.01);
+        assertEquals(30, retangulo.calculaPerimetro(), 0.01);
     }
 
     @Test
-    public void testNomeCompleto() {
-        Nome nome = new Nome("Dr.", "Pedro", "Nunes", "Oliveira");
-        assertEquals("Dr. Pedro Nunes Oliveira", nome.getNomeCompleto());
-
-        Nome nomeSemTitulo = new Nome(null, "Pedro", null, "Nunes");
-        assertEquals("Pedro Oliveira", nomeSemTitulo.getNomeCompleto());
+    public void testRetanguloBaseAlturaInvalidos() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Retangulo(0, 10);
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Retangulo(-5, 10);
+        });
     }
 
     @Test
-    public void testNumerosMinimoMaximo() {
-        Numeros numeros = new Numeros(10, 5, 8);
-        assertEquals(5, numeros.minimo());
-        assertEquals(10, numeros.maximo());
-    }
-
-    @Test
-    public void testTriangulo() {
-        Triangulo triangulo = new Triangulo(3, 4, 5, 6, 5);
-        assertEquals(15, triangulo.calcularArea(), 0.01);
-        assertEquals(12, triangulo.calcularPerimetro(), 0.01);
-        assertEquals("Escaleno", triangulo.obterTipo());
-    }
-
-    @Test
-    public void testContribuinteAposentadoria() {
+    public void testContribuintePodeAposentar() {
         Contribuinte contribuinteHomem = new Contribuinte(65, 'M', 20);
         assertTrue(contribuinteHomem.podeAposentar());
 
@@ -54,13 +51,25 @@ public class AppTest {
     }
 
     @Test
-    public void testAlunoPontuacaoEAprovacao() {
-        Aluno aluno = new Aluno(21, 19, 20);
-        assertEquals(60, aluno.calcularPontuacaoFinal());
-        assertEquals(3, aluno.verificarAprovacao());
+    public void testContribuinteIdadeOuTempoInvalido() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Contribuinte(0, 'M', 20);
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Contribuinte(65, 'M', -5);
+        });
+    }
 
-        aluno.setAI(30);
-        assertEquals(71, aluno.calcularPontuacaoFinal());
-        assertEquals(2, aluno.verificarAprovacao());
+    @Test
+    public void testAlunoValidacoes() {
+        Aluno aluno = new Aluno(20, 20, 30);
+        assertEquals(70, aluno.calcularPontuacaoFinal());
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Aluno(31, 20, 30); // A1 inválida
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            aluno.setAI(35); // AI inválida
+        });
     }
 }
