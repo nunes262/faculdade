@@ -8,24 +8,20 @@ import Lista05Exe01.pecas.Peca;
 
 public class Lista05Exe01 {
     public static void main(String[] args) {
-        // Criando peças com seus movimentos padrões
-        Peca knight = new Cavalo(); // Movimento em L
-        Peca pawn = new Peao(); // Movimento para frente
-        Peca bishop = new Bispo(); // Movimento diagonal
+        Peca knight = new Cavalo();
+        Peca pawn = new Peao();
+        Peca bishop = new Bispo();
 
-        // Movimentando cada peça usando seu movimento padrão
         System.out.println("Cavalo move:");
-        knight.mover(); // Saída: Movendo em L
+        knight.mover();
 
         System.out.println("\nPeao move:");
-        pawn.mover(); // Saída: Movendo para frente
+        pawn.mover();
 
         System.out.println("\nBispo move:");
-        bishop.mover(); // Saída: Movendo na diagonal
-
-        // Alterando a estratégia de movimento do peão para movimento em L
+        bishop.mover();
         System.out.println("\nMudando a estratégia de movimento do peão para formato L:");
         pawn.setMovimento(new MovimentoEmL());
-        pawn.mover(); // Saída: Movendo em L
+        pawn.mover();
     }
 }
